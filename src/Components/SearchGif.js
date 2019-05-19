@@ -6,15 +6,15 @@ class SearchGif extends React.Component {
         this.state = { term: '' }
     }
 
-    input(term) {
+    onInput(term) {
         this.setState({term});
         this.props.onTerm(term);
     }
 
     render() {
         return (
-            <div className="search">
-                <input onChange={ event => this.onInput(event.target.value)} />
+            <div>
+                <input onChange={event => this.onInput(event.target.value)} />
             </div>
         );
     }
