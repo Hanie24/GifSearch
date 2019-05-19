@@ -5,7 +5,7 @@ const GroupList = ({ gifs }) => {
   const gifItems = gifs.map(gif => <GifElement key={gif.id} gif={gif} />);
 
   return (
-    <ul>{gifItems}</ul>
+    <ul className="square">{gifItems}</ul>
   );
 };
 
