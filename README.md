@@ -1,68 +1,33 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Buscador de GIFs
 
-## Available Scripts
+### Para comenzar:
 
-In the project directory, you can run:
+Instalar el boilerplate: npm install -g create-react-app.
+Crear un proyecto nuevo: npx create-react-app gif-search.
+Correr el proyecto: npm start.
+Ir al navegador y ver que el proyecto corre: http://localhost:3000/.
+¡ Comencemos!
 
-### `npm start`
+## Los componentes son:
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### App.js
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Este componente es nuestro contenedor y será nuestro punto de partida. 
 
-### `npm test`
+### SearchGif.js
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Este componente será la barra de búsqueda que importamos en App.js
 
-### `npm run build`
+### GroupList.js
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Asigna a través de la matriz de gifs que recibiremos de la API de Giphy 
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### GifElement.js
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Y finalmente un GifElement para procesar los gifs individuales.
 
-### `npm run eject`
+## Consumiendo la API de Giphy
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+La API base es http://api.giphy.com/v1/gifs/search?q=. A continuación le debemos escribir el nombre del gif que queremos, para lo que usaremos: ${term} con lo que interpolamos el contenido del buscador y adicionalmente nuestra API KEY con &api_key= seguida del número asignado al crear un proyecto en https://developers.giphy.com/ .
+Y, para hacer los llamados usaremos una librería llamada axios. Para hacer uso de ella utilizaremos el comando: npm install axios y la importamos en App.js.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
